@@ -18,6 +18,11 @@ a {
     color: #004A7C;
 }
 
+#logo2 {
+    font-size: 25px;
+    color: #004A7C;
+}
+
 #liniaLogo {
     margin-left: auto;
     margin-right: auto;
@@ -66,6 +71,12 @@ input {
     display: flex;
     width: 625px;
 }
+#przycisk {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
 
 sub {
     font-size: 0.7rem;
@@ -91,7 +102,20 @@ sub {
     width: 300px;
 }
 
-#wyczysc:hover, #wroc:hover, #oblicz:hover {
+#wroc2 {
+    margin-top: 25px;
+    margin-right: 25px;
+    background-color: #005691;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+    color: #E8F1F5;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    width: 300px;
+}
+#wyczysc:hover, #wroc:hover, #wroc2:hover, #oblicz:hover {
     background-color: #008CBA;
     cursor: pointer;
 }
