@@ -13,6 +13,7 @@
         <div id="container">
             <p id="wprowadz">Poniżej wprowadź wszystkie potrzebne dane: </p>
             <p><i>(w liczbach z przecinkiem należy użyć <b>kropki</b>)</i><p>
+
             <table id="daneWejsciowe">
                 <tr>
                     <td class="header"><b>Nazwa danej</b></td>
@@ -22,53 +23,55 @@
                 <tr>
                     <td><b>Ilość odlewów w formie</b></td>
                     <td>[szt]</td>
-                    <td><input type="text" id="ileOdlewow" placeholder="2"></td>
+                    <td><input type="number" id="ileOdlewow" placeholder="2" ></td>
                 </tr>
                 <tr>
                     <td><b>Ilość odlewów zasilanych przez wlew rozprowadzający</b></td>
                     <td>[szt]</td>
-                    <td><input type="text" id="ileOdlewowWR" placeholder="2"></td>
+                    <td><input type="number" id="ileOdlewowWR" placeholder="2" ></td>
                 </tr>
                 <tr>
                     <td><b>Liczba wlewów doprowadzających</b></td>
                     <td>[szt]</td>
-                    <td><input type="text" id="ileWD" placeholder="4"></td>
+                    <td><input type="number" id="ileWD" placeholder="4" ></td>
                 </tr>
                 <tr>
                     <td><b>Współczynnik K(pk)</b></td>
                     <td>[-]</td>
-                    <td><input type="text" id="wspK" placeholder="0.2"></td>
+                    <td><input type="number" id="wspK" placeholder="0.2" ></td>
                 </tr>
                 <tr>
                     <td><b>Parametr C</b></td>
                     <td>[cm]</td>
-                    <td><input type="text" id="paramC" placeholder="1.4"></td>
+                    <td><input type="number" id="paramC" placeholder="1.4" ></td>
                 </tr>
                 <tr>
                     <td><b>Współczynnik k (uzysk)</b></td>
                     <td>[-]</td>
-                    <td><input type="text" id="uzysk" placeholder="1.4"></td>
+                    <td><input type="number" id="uzysk" placeholder="1.4" ></td>
                 </tr>
                 <tr>
                     <td><b>Współczynnik k1 (dla czasu zalewania)</b></td>
                     <td>[-]</td>
-                    <td><input type="text" id="wspKdlaCZ" placeholder="2.2"></td>
+                    <td><input type="number" id="wspKdlaCZ" placeholder="2.2" ></td>
                 </tr>                
                 <tr>
                     <td><b>Objętość surowego odlewu</b></td>
                     <td>[cm<sup>3</sup>]</td>
-                    <td><input type="text" id="objOdlewu" placeholder="32.5"></td>
+                    <td><input type="number" id="objOdlewu" placeholder="32.5" ></td>
                 </tr>
                 <tr>
                     <td><b>Gęstość właściwa stopu</b></td>
                     <td>[g/cm<sup>3</sup>]</td>
-                    <td><input type="text" id="gestStopu" placeholder="2.7"></td>
+                    <td><input type="number" id="gestStopu" placeholder="2.7" ></td>
                 </tr>
             </table>
+
             <div id="przyciski">
-                <a href="#"><button id="wyczysc">Wyczyść dane</button></a>
+                <a href="#"><button id="wyczysc" onclick="location.reload()">Wyczyść dane</button></a>
                 <a href="#"><button id="oblicz" onclick="oblicz()">Oblicz</button></a>
             </div>
+
         </div>
         <div id="wynik">
             <p id="wprowadz">Poniżej znajdują się wyniki obliczeń: </p>
@@ -138,7 +141,7 @@
                 <a href="index.html"><button id="wroc2">Wróć</button></a>
             </div>
         </div>
-        <script src="js/oblicz.js"></script>
+        <script src="js/oblicz.js" type="text/javascript"></script>
         <br><br>
         <p id="footer">Copyright &copy 2020 by Kamil Żak, Wydział Odlewnictwa, KWPI</p>
     </body>
