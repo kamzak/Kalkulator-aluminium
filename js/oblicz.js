@@ -22,24 +22,24 @@ function oblicz() {
     
     // Obliczenie masy surowego odlewu
     let masaOdlewu = document.getElementById("masaOdlewu");
-    masaOdlewu.innerHTML = roundTo(((gestStopu * objOdlewu) / 1000), 3);
+    masaOdlewu.innerHTML = roundTo(((gestStopu * objOdlewu) / 1000), 2);
 
     // Obliczenie masy surowego odlewu z układem zasilającym i wlewowym
     let masaOdlewuZUW = document.getElementById("masaOdlewuZUW");
-    masaOdlewuZUW.innerHTML = roundTo((masaOdlewu.innerHTML * uzysk), 3);
+    masaOdlewuZUW.innerHTML = roundTo((masaOdlewu.innerHTML * uzysk), 2);
 
     // Zalecany czas zalewania
     let czasZ = document.getElementById("czasZ");
-    czasZ.innerHTML = roundTo((wspKdlaCZ * Math.sqrt(masaOdlewuZUW.innerHTML)), 1);
+    czasZ.innerHTML = roundTo((wspKdlaCZ * Math.sqrt(masaOdlewuZUW.innerHTML)), 2);
 
     // Obliczenie sumy powierzchni przekrojów wlewów doprowadzających
-    let suma = masaOdlewuZUW.innerHTML / (roundTo(czasZ.innerHTML, zaok) * wspK );
+    let suma = masaOdlewuZUW.innerHTML / (roundTo(czasZ.innerHTML, zaok) * wspK);
     let sumaPrzWD = document.getElementById("sumaPrzWD");
-    sumaPrzWD.innerHTML = roundTo(suma, 1);
+    sumaPrzWD.innerHTML = roundTo(suma, 2);
 
     // Obliczanie przekrojów wlewów doprowadzających
     let przWD = document.getElementById("przWD");
-    przWD.innerHTML = roundTo((sumaPrzWD.innerHTML/ ileWD), 1)
+    przWD.innerHTML = roundTo((sumaPrzWD.innerHTML/ ileWD), 2)
 
     // Obliczenie przekroju wlewu rozprowadzającego
     let przWR = document.getElementById("przWR");
@@ -47,11 +47,11 @@ function oblicz() {
 
     // Obliczenie przekroju wlewu głównego
     let przWG = document.getElementById("przWG");
-    przWG.innerHTML = roundTo((1 * ileOdlewow * sumaPrzWD.innerHTML), 1);
+    przWG.innerHTML = roundTo((1 * ileOdlewow * sumaPrzWD.innerHTML), 2);
 
     // Obliczenie pojemności zbiornika wlewowego
     let objZW = document.getElementById("objZW");
-    objZW.innerHTML = roundTo(((masaOdlewuZUW.innerHTML*ileOdlewow*1000)/(gestStopu * czasZ.innerHTML)), 1);
+    objZW.innerHTML = roundTo(((masaOdlewuZUW.innerHTML*ileOdlewow*1000)/(gestStopu * czasZ.innerHTML)), 2);
 
     // Prędkość liniowa podnoszenia się metalu w formie
     let prLin = document.getElementById("prLin");
