@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+body {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #E8F1F5,#E8F1F5);
+    text-align: center;
+    color: #005691;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#logo {
+    font-size: 35px;
+    color: #004A7C;
+}
+
+#liniaLogo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 50%, rgba(9,9,121,1) 100%);
+    width: 850px;
+    height: 3px;
+}
+
+#wprowadz {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#daneWejsciowe{
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 14px 18px 19px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 18px 19px -13px rgba(0,0,0,0.75);
+    box-shadow: 14px 18px 19px -13px rgba(0,0,0,0.75);
+    text-align: left;
+    font-family: sans-serif;
+}
+
+tr:first-child{
+    background-color: #005691;
+    color: #E8F1F5;
+    font-size: 1.1rem;
+}
+
+table, th, td{
+    border: 1px solid gray;
+    padding: 15px;
+    text-align: center;
+}
+
+input {
+    width: 70px;
+    text-align: center;
+}
+
+#przyciski {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 625px;
+}
+
+sub {
+    font-size: 0.7rem;
+}
+
+
+.wyroznij {
+    background-color: #309ce4;
+    color: white;
+}
+
+#wyczysc, #wroc, #oblicz {
+    margin-top: 25px;
+    margin-right: 25px;
+    background-color: #005691;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+    color: #E8F1F5;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    width: 300px;
+}
+
+#wyczysc:hover, #wroc:hover, #oblicz:hover {
+    background-color: #008CBA;
+    cursor: pointer;
+}
+
+#wynik {
+    display: none;
+}
+
+#container {
+    /*display:none;*/
+}
+
