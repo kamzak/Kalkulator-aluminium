@@ -12,7 +12,6 @@
         <div id="liniaLogo"></div>
         <div id="container">
             <p id="wprowadz">Poniżej wprowadź wszystkie potrzebne dane: </p>
-            <p><i>(w liczbach z przecinkiem należy użyć <b>kropki</b>)</i><p>
 
             <table id="daneWejsciowe">
                 <tr>
@@ -23,53 +22,89 @@
                 <tr>
                     <td><b>Ilość odlewów w formie</b></td>
                     <td>[szt]</td>
-                    <td><input type="number" id="ileOdlewow" placeholder="2" ></td>
+                    <td><input type="number" id="ileOdlewow" placeholder="2" >
+                        <div class="podpowiedz">[?]
+                        <span class="podpTekst">Ilość odlewów musi być większa lub równa 1.</span>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td><b>Ilość odlewów zasilanych przez wlew rozprowadzający</b></td>
                     <td>[szt]</td>
-                    <td><input type="number" id="ileOdlewowWR" placeholder="2" ></td>
+                    <td><input type="number" id="ileOdlewowWR" placeholder="2" >
+                        <div class="podpowiedz">[?]
+                            <span class="podpTekst">Ilość odlewów zasilających układ musi być większa lub równa 1.</span>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td><b>Liczba wlewów doprowadzających</b></td>
                     <td>[szt]</td>
-                    <td><input type="number" id="ileWD" placeholder="4" ></td>
+                    <td><input type="number" id="ileWD" placeholder="4" >
+                        <div class="podpowiedz">[?]
+                            <span class="podpTekst">Ilość wlewów doprowadzających musi być większa lub równa 1.</span>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><b>Współczynnik K(pk)</b></td>
+                    <td><b>Współczynnik prędkości zalewania K(pk)</b></td>
                     <td>[-]</td>
-                    <td><input type="number" id="wspK" placeholder="0.2" ></td>
+                    <td><input type="number" id="wspK" placeholder="0.2" >
+                        <div class="podpowiedz">[?]
+                            <span class="podpTekst">Współczynnik prędkości zalewania K(pk) dla stopów aluminium mieści się zakresie 0.20 - 0.45.</span>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td><b>Parametr C</b></td>
                     <td>[cm]</td>
-                    <td><input type="number" id="paramC" placeholder="1.4" ></td>
+                    <td><input type="number" id="paramC" placeholder="1.4" >
+                        <div class="podpowiedz">[?]
+                            <span class="podpTekst">Parametr C musi być większy od 0.</span>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td><b>Współczynnik k (uzysk)</b></td>
                     <td>[-]</td>
-                    <td><input type="number" id="uzysk" placeholder="1.4" ></td>
+                    <td><input type="number" id="uzysk" placeholder="1.4" >
+                        <div class="podpowiedz">[?]
+                            <span class="podpTekst">Dla stopów aluminium przyjmuje się uzysk równy 1.4.</span>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td><b>Współczynnik k1 (dla czasu zalewania)</b></td>
                     <td>[-]</td>
-                    <td><input type="number" id="wspKdlaCZ" placeholder="2.2" ></td>
+                    <td><input type="number" id="wspKdlaCZ" placeholder="2.2" >
+                        <div class="podpowiedz">[?]
+                            <span class="podpTekst">Współczynnik k1 musi być większy od 0.</span>
+                        </div>
+                    </td>
                 </tr>                
                 <tr>
                     <td><b>Objętość surowego odlewu</b></td>
                     <td>[cm<sup>3</sup>]</td>
-                    <td><input type="number" id="objOdlewu" placeholder="32.5" ></td>
+                    <td><input type="number" id="objOdlewu" placeholder="32.5" >
+                        <div class="podpowiedz">[?]
+                            <span class="podpTekst">Objętość odlewu musi być większa od 0.</span>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td><b>Gęstość właściwa stopu</b></td>
                     <td>[g/cm<sup>3</sup>]</td>
-                    <td><input type="number" id="gestStopu" placeholder="2.7" ></td>
+                    <td><input type="number" id="gestStopu" placeholder="2.7" >
+                        <div class="podpowiedz">[?]
+                            <span class="podpTekst">Gęstość stopu musi być większa od 0.</span>
+                        </div>
+                    </td>
                 </tr>
             </table>
 
             <div id="przyciski">
                 <a href="#"><button id="wyczysc" onclick="location.reload()">Wyczyść dane</button></a>
-                <a href="#"><button id="oblicz" onclick="oblicz()">Oblicz</button></a>
+                <a href="#"><button id="oblicz" onclick="test()">Oblicz</button></a>
             </div>
 
         </div>
@@ -85,55 +120,55 @@
                 <tr>
                     <td><b>Masa surowego odlewu</b></td>
                     <td class="wyroznij">Q<sub>odl</sub></td>
-                    <td class="wyroznij"><span id="masaOdlewu">0</span></td>
+                    <td class="wyroznij pogrubione"><span id="masaOdlewu">0</span></td>
                     <td class="wyroznij">[kg]</td>                    
                 </tr>
                 <tr>
                     <td><b>Masa surowego odlewu z układem zasilającym i wlewowym</b></td>
                     <td class="wyroznij">Q<sub>c</su</td>
-                    <td class="wyroznij"><span id="masaOdlewuZUW">0</span></td>
+                    <td class="wyroznij pogrubione"><span id="masaOdlewuZUW">0</span></td>
                     <td class="wyroznij">[kg]</td>                    
                 </tr>
                 <tr>
                     <td><b>Zalecany czas zalewania</b></td>
                     <td class="wyroznij">&#120591;</td>
-                    <td class="wyroznij"><span id="czasZ">0</span></td>
+                    <td class="wyroznij pogrubione"><span id="czasZ">0</span></td>
                     <td class="wyroznij">[s]</td>                    
                 </tr>
                 <tr>
                     <td><b>Przekrój wlewu głównego</b></td>
                     <td class="wyroznij">F<sub>WG</sub></td>
-                    <td class="wyroznij"><span id="przWG">0</span></td>
+                    <td class="wyroznij pogrubione"><span id="przWG">0</span></td>
                     <td class="wyroznij">[cm<sup>2</sup>]</td>                    
                 </tr>
                 <tr>
                     <td><b>Przekrój wlewu rozprowadzającego</b></td>  
                     <td class="wyroznij">F<sub>WR</sub></td>                  
-                    <td class="wyroznij"><span id="przWR">0</span></td>
+                    <td class="wyroznij pogrubione"><span id="przWR">0</span></td>
                     <td class="wyroznij">[cm<sup>2</sup>]</td>
                 </tr>
                 <tr>
                     <td><b>Przekrój pojedynczego wlewu doprowadzającego</b></td>
                     <td class="wyroznij">F<sub>WD</sub></td>
-                    <td class="wyroznij"><span id="przWD">0</span></td>
+                    <td class="wyroznij pogrubione"><span id="przWD">0</span></td>
                     <td class="wyroznij">[cm<sup>2</sup>]</td>                    
                 </tr>
                 <tr>
                     <td><b>Suma powierzchni przekrojów wlewów doprowadzających</b></td>
                     <td class="wyroznij">&Sigma;F<sub>WD</sub></td>
-                    <td class="wyroznij"><span id="sumaPrzWD">0</span></td>
+                    <td class="wyroznij pogrubione"><span id="sumaPrzWD">0</span></td>
                     <td class="wyroznij">[cm<sup>2</sup>]</td>                    
                 </tr>                
                 <tr>
                     <td><b>Objętość zbiornika wlewowego</b></td>
                     <td class="wyroznij">V</td>
-                    <td class="wyroznij"><span id="objZW">0</span></td>
+                    <td class="wyroznij pogrubione"><span id="objZW">0</span></td>
                     <td class="wyroznij">[cm<sup>3</sup>]</td>                    
                 </tr>
                 <tr>
                     <td><b>Prędkość liniowa podnoszenia się metalu w formie</b></td>
                     <td class="wyroznij">&#977;</td>
-                    <td class="wyroznij"><span id="prLin">0</span></td>
+                    <td class="wyroznij pogrubione"><span id="prLin">0</span></td>
                     <td class="wyroznij">[cm/s]</td>                    
                 </tr>
             </table>

@@ -124,3 +124,67 @@ sub {
     display: none;
 }
 
+.blad {
+    background: orangered;
+    color: black;    
+    border: 2px solid #005691;
+}
+
+.poprawnie {
+    background: greenyellow;
+    color: black;    
+    border: 2px solid #014d01f1;
+}
+.podpowiedz {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.podpowiedz .podpTekst {
+    visibility: hidden;
+    width: 150px;
+    background-color: rgb(3, 70, 109);
+    color: #fff;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: 1px solid white;
+  
+    /* Pozycja tekstu podpowiedzi */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -160px;
+  
+    /* Pojawienie się */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+  
+  /* Strzałka podpowiedzi */
+.podpowiedz .podpTekst::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(3, 70, 109) transparent transparent transparent;
+  }
+  
+  /* Pokaz podpowiedz po najechaniu myszką */
+.podpowiedz:hover .podpTekst {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.pogrubione {
+    font-weight: bold;
+}
