@@ -188,3 +188,8 @@ img {
 .pogrubione {
     font-weight: bold;
 }
+
+::placeholder{
+    color: black;
+    opacity: 0.25;
+}
