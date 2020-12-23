@@ -11,7 +11,8 @@
         <a href="https://kamzak.github.io/Kalkulator/" id="logo2">ze stopów aluminium</a><br>
         <div id="liniaLogo"></div>
         <div id="container">
-            <p id="wprowadz">Poniżej wprowadź wszystkie potrzebne dane: </p>
+            <p id="wprowadz">Poniżej wprowadź wszystkie potrzebne dane.</p>
+            </p>Po najechaniu kursorem na znak zapytania pojawi się podpowiedź odnośnie zalecanej wartości.</p>
 
             <table id="daneWejsciowe">
                 <tr>
@@ -38,9 +39,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><b>Liczba wlewów doprowadzających</b></td>
+                    <td><b>Liczba wlewów doprowadzających na jeden odlew</b></td>
                     <td>[szt]</td>
-                    <td><input type="number" id="ileWD" placeholder="4" >
+                    <td><input type="number" id="ileWD" placeholder="2" >
                         <div class="podpowiedz">[?]
                             <span class="podpTekst">Ilość wlewów doprowadzających musi być większa lub równa 1.</span>
                         </div>
@@ -97,6 +98,21 @@
                     <td><input type="number" id="gestStopu" placeholder="2.7" >
                         <div class="podpowiedz">[?]
                             <span class="podpTekst">Gęstość dla stopów aluminium przyjmuje się 2.7.</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Stosunek powierzchni przekrojów elementów układu wlewowego</b></td>
+                    <td>[-]</td>
+                    <td><p style="word-spacing: 0.42cm; text-align:left; font-weight: bold;">F<sub>WD</sub> :F<sub>WR</sub> :F<sub>WG</sub></p>
+                        <input type="number" id="fwd" placeholder="2"> :
+                        <input type="number" id="fwr" placeholder="1.8"> :
+                        <input type="number" id="fwg" placeholder="1">
+                        <div class="podpowiedz">[?]
+                            <span class="podpTekst">Stosunki powierzchni przekrojów dla stopów aluminium mieszczą się w zakresie<br><br>
+                                F<sub>WD</sub> : F<sub>WR</sub> : F<sub>WG</sub><br>
+                                2&divide;6 : 1.2&divide;2 : 1
+                            </span>
                         </div>
                     </td>
                 </tr>

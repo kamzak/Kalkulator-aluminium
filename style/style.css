@@ -82,6 +82,9 @@ sub {
     font-size: 0.7rem;
 }
 
+#fwd, #fwr, #fwg {
+    width: 35px;
+}
 
 .wyroznij {
     background-color: #309ce4;
