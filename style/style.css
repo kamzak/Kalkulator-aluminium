@@ -123,6 +123,11 @@ sub {
     cursor: pointer;
 }
 
+#przekroje {
+    font-size: 13px;
+    text-align: left;
+}
+
 #wynik {
     display: none;
 }
